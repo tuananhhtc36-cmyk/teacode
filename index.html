@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Main header */
+      .main-header {
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        padding-top: 15%;
+        background:
+          linear-gradient(to bottom, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.2)),
+          url(https://giadinh.mediacdn.vn/296230595582509056/2022/10/27/ntdvnscreenshot-23-1-1666843055420-1666843055601667259059.jpg)
+            center/cover;
+      }
+
+      .main-contents {
+        color: white;
+      }
+
+      .main-contents button {
+        width: 100px;
+        height: 30px;
+        background: linear-gradient(to left, rgb(0, 187, 90), rgb(0, 197, 232));
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+      }
+
+      .main-contents button:hover {
+        width: 120px;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+      }
+      .features div {
+        border: 1px solid rgb(161, 232, 196);
+        padding: 20px;
+        text-align: center;
+        font-size: 13px;
+      }
+      .features div:hover {
+        background: rgb(174, 234, 196);
+        color: white;
+        transition: 0.4s;
+      }
+      .features h3 {
+        margin-bottom: 10px;
+        color: rgb(59, 231, 50);
+        letter-spacing: 5px;
+      }
+      .title {
+        text-align: center;
+        margin: 30px 0;
+        color: rgb(59, 231, 50);
+      }
+      .main-contents p {
+        letter-spacing: 3px;
+        color: aquamarine;
+      }
+      .about-section {
+        display: flex;
+        align-items: center;
+        padding: 80px 10%;
+        gap: 50px;
+        background: #fff;
+      }
+
+      /* Phần hình ảnh */
+      .about-image-container {
+        flex: 1;
+        position: relative;
+        max-width: 500px;
+      }
+
+      .image-wrapper img {
+        width: 100%;
+        display: block;
+        border-radius: 20px 20px 0 0; /* Bo góc trên */
+        z-index: 2;
+        position: relative;
+      }
+
+      .green-block {
+        background-color: #769152;
+        height: 150px; /* Chiều cao khối xanh phía dưới */
+        width: 100%;
+        border-radius: 0 0 20px 20px; /* Bo góc dưới */
+        margin-top: -5px;
+      }
+
+      /* Phần nội dung */
+      .about-content {
+        flex: 1;
+        text-align: left;
+      }
+
+      .script-font {
+        font-family: "Cursive", sans-serif;
+        color: #779253;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .main-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-top: 5px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+      }
+
+      .about-content p {
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+
+      /* Nút Learn More */
+      .btn-learn-more {
+        display: inline-block;
+        padding: 12px 30px;
+        border: 2px solid #769152;
+        color: #769152;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        margin-top: 10px;
+      }
+
+      .btn-learn-more:hover {
+        background: #769152;
+        color: #fff;
+      }
+      .products-section {
+        background-color: #3d443a; /* Màu nền tối trong ảnh */
+        padding: 80px 5%;
+      }
+
+      .products-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap; /* Tự động xuống hàng trên điện thoại */
+      }
+
+      /* Card thông tin chung */
+      .product-info-card {
+        flex: 1;
+        min-width: 300px;
+        max-width: 400px;
+      }
+
+      .white-text {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .light-gray-text {
+        color: #bdc3c7;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      /* Nút Inventory */
+      .btn-inventory {
+        display: inline-block;
+        padding: 10px 25px;
+        border: 2px solid #769152;
+        color: #769152;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Từng ô sản phẩm */
+      .product-item {
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+        text-align: left;
+      }
+
+      .product-img img {
+        width: 100%;
+        border-radius: 15px; /* Bo góc ảnh như trong hình */
+        margin-bottom: 20px;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .product-name {
+        color: #ffffff;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+
+      .price {
+        color: #769152;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      /* Font viết tay cho chữ "Check Out" */
+      .script-font {
+        font-family: "Dancing Script", cursive;
+        color: #769152;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- main header -->
+    <div class="main-header">
+      <div class="main-contents">
+        <p>Over hunrred flavors of tea</p>
+        <h2>SPECIALLY CRAFTED TEA</h2>
+        <button>Explore</button>
+      </div>
+    </div>
+    <!-- mới  -->
+    <div class="title">
+      <h3>Features</h3>
+    </div>
+    <div class="features">
+      <div>
+        <h3>MADE WITH LOVE</h3>
+        <p>
+          Our tea is made with love, from the collection of the leaves to the
+          brewing.
+        </p>
+      </div>
+      <div>
+        <h3>RELAXATION</h3>
+        <p>
+          Set aside anxiety and relax after a hard day with a cup of hot tea in
+          your hands.
+        </p>
+      </div>
+      <div>
+        <h3>ENERGY</h3>
+        <p>
+          Our tea will energize you with vitamins and invigorate the rest of the
+          day.
+        </p>
+      </div>
+      <div>
+        <h3>FAMILY RECIPE</h3>
+        <p>
+          All our recipes are passed down from generation to generation for a
+          long time.
+        </p>
+      </div>
+    </div>
+    <section class="about-section">
+      <div class="about-image-container">
+        <div class="image-wrapper">
+          <img
+            src="https://sasaki.com.vn/wp-content/uploads/2023/10/tra-thao-moc-01.jpg"
+            alt="Tea Pot"
+          />
+        </div>
+        <div class="green-block"></div>
+      </div>
+
+      <div class="about-content">
+        <h4 class="script-font">About Our</h4>
+        <h2 class="main-title">TEA STATION</h2>
+
+        <p>
+          Once upon a time we only had a couple of teapots and enjoyed tea only
+          with our family. Over time, we were able to afford to buy a small tea
+          plantation.
+        </p>
+
+        <p>
+          Now we have a whole teahouse and we delight many people with delicious
+          and hot tea. We serve black long tea, relaxing green and jasmine tea,
+          tea with spices and many others.
+        </p>
+
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </section>
+    <section class="products-section">
+      <div class="products-container">
+        <div class="product-info-card">
+          <h4 class="script-font">Check Out</h4>
+          <h2 class="white-text">OUR PRODUCTS</h2>
+          <p class="light-gray-text">
+            Our assortment includes long tea, relaxing and invigorating green
+            tea with spices, lemon juice, jasmine, cinnamon and anise, milk tea
+            and many others.
+          </p>
+          <a href="#" class="btn-inventory">INVENTORY</a>
+        </div>
+
+        <div class="product-item">
+          <div class="product-img">
+            <img
+              src="https://bizweb.dktcdn.net/100/201/525/files/tra-den-tra-xanh-va-tra-o-long-bi-quyet-lua-chon-tra-lanh-manh-cho-phai-dep.jpg?v=1746287267532"
+              alt="Black Long Tea"
+            />
+          </div>
+          <h3 class="product-name">BLACK LONG TEA</h3>
+          <p class="price">$ 3.99</p>
+        </div>
+
+        <div class="product-item">
+          <div class="product-img">
+            <img
+              src="a/Users/letuananh/Downloads/Tra-Xanh.jpg"
+              alt="Green Tea with Jasmine"
+            />
+          </div>
+          <h3 class="product-name">GREEN TEA WITH JASMINE</h3>
+          <p class="price">$ 4.99</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

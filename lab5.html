@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Slab", serif;
+      }
+      nav {
+        text-align: center;
+        width: 100%;
+      }
+      nav ul li {
+        display: inline-block;
+        padding: 10px;
+        font-size: 13px;
+        transition: 0.4s;
+      }
+      nav ul li:hover {
+        font-weight: bold;
+        background: rgb(121, 224, 183);
+      }
+
+      .main-header {
+        border: 2px solid black;
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        padding-top: 10%;
+        background:
+          linear-gradient(to bottom, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.2)),
+          url(https://giadinh.mediacdn.vn/296230595582509056/2022/10/27/ntdvnscreenshot-23-1-1666843055420-1666843055601667259059.jpg)
+            center/cover;
+      }
+      .main-content {
+        border: 2px solid rgb(90, 222, 239);
+        color: white;
+      }
+
+      .main-content button {
+        width: 100px;
+        height: 40px;
+        background: linear-gradient(
+          to left,
+          rgb(121, 224, 183),
+          rgb(90, 222, 239)
+        );
+        color: aliceblue;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0, 4s;
+      }
+      .main-content button:hover {
+        width: 120px;
+      }
+      .menu {
+        border: 2px solid black;
+        background: rgb(255, 255, 255);
+        font-size: 30px;
+        position: fixed;
+        border-radius: 7px;
+        top: 30px;
+        left: 30px;
+        padding: 5px 10px;
+      }
+      .left-menu {
+        border: 2px solid black;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        background: rgb(255, 255, 255);
+      }
+      .left-menu i {
+        font-size: 30px;
+        color: #000;
+      }
+      .left-menu li {
+        padding: 15px;
+        font-weight: bold;
+      }
+      .left-menu li:hover {
+        transition: translateX(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <i class="bx bx-menu"></i>
+    </div>
+    <div class="left-menu">
+      <i class="bx bx-x"></i>
+      <ul>
+        <li>FEATURES</li>
+        <li>ABOUT</li>
+        <li>CONTACT</li>
+        <li>HEL</li>
+        <li>LOGIN</li>
+      </ul>
+    </div>
+    <nav>
+      <ul>
+        <li>FEATURES</li>
+        <li>ABOUT</li>
+        <li>CONTACT</li>
+        <li>HEL</li>
+        <li>LOGIN</li>
+      </ul>
+    </nav>
+
+    <div class="main-header">
+      <div class="main-content">
+        <p>Over hunrred flavors of tea</p>
+        <h2>SPECIALLY CRAFTED TEA</h2>
+        <button>Explore</button>
+      </div>
+    </div>
+  </body>
+</html>
